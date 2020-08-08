@@ -1,21 +1,28 @@
 import React from "react"
-import { Link } from "gatsby";
-import {Grid} from '@material-ui/core'
-import Image from "../components/image";
 import SEO from "../components/seo"
-import NavBar from '../components/NavBar';
-import Intro from '../components/intro';
+import NavBar from "../components/NavBar"
+import Intro from "../components/intro"
+import MySkillSet from "../components/skillset"
+import MyProjects from "../components/projects"
+import MyExperience from "../components/experience"
+import MyEducation from "../components/education"
+import MyCertifications from "../components/certifications"
+import ContactMe from "../components/contactme"
+import Footer from '../components/footer';
 
 const IndexPage = () => (
-  <div style={{backgroundColor:'#F5F5F5'}}>
-    <SEO title="Portfolio"  />
+  <div style={{ backgroundColor: "#F5F5F5",width:'100%',overflowX:'hidden',padding:0,margin:0 }}>
+    <SEO title="Portfolio" />
     <NavBar/>
-    <Intro/>
-
-  
-    
-  
-</div>
+    <Intro id="intro"/>
+    <MySkillSet id="skills" />
+    <MyProjects id="projects" />
+    <MyExperience id="experience" />
+    <MyEducation id="education" />
+    <MyCertifications id="certification" />
+    <ContactMe id="contactme" />
+    <Footer/>
+  </div>
 )
 
 export default IndexPage
