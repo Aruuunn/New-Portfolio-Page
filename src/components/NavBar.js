@@ -1,20 +1,22 @@
-import React from 'react'
-import {AppBar , Grid  ,Hidden } from '@material-ui/core';
+import React , {useState} from 'react'
+import {AppBar , Grid  ,Hidden  } from '@material-ui/core';
 import InstagramLogo from '../images/1@2x.png';
 import GithubLogo from '../images/Path 305@2x.png';
 import LinkedInLogo from '../images/icons8-linkedin.png';
 import MenuIcon from '../images/menu.svg';
 import './NavBar.css';
-
+import Drawer from './drawer';
 
 function NavBar() {
+    const [open ,setOpen] = useState(false);
+
     return (
         <div style={{height:'50px',width:'100%'}}>
             <AppBar position="fixed" className="appbar">
                 <Grid container justify="center" alignItems="center" style={{padding:'15px'}}>
 <Grid alignItems="center" justify="space-between" container item style={{maxWidth:'1366px'}}>
     <Hidden only={['lg','xl']}>
-    <img src={MenuIcon} style={{width:'24px',height:'auto' ,marginRight:'15px',color:'white'}}/>
+    <img src={MenuIcon} style={{width:'24px',height:'auto' ,marginRight:'15px',color:'white'}} onClick={()=>setOpen(true)}/>
 
     </Hidden>
 <Grid  container item lg={1} sm={6} xs={4} style={{fontSize:'24px',fontWeight:'bold'}}>
@@ -59,6 +61,7 @@ Arun
             
 
             </AppBar>
+            <Drawer open={open} onClose={() => setOpen(false)}/>
         </div>
     )
 }

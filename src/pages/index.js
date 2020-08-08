@@ -1,6 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
-import Image from "../components/image"
+import { Link } from "gatsby";
+import {Grid} from '@material-ui/core'
+import Image from "../components/image";
 import SEO from "../components/seo"
 import NavBar from '../components/NavBar';
 import Intro from '../components/intro';
@@ -10,6 +11,9 @@ const IndexPage = () => (
     <SEO title="Portfolio"  />
     <NavBar/>
     <Intro/>
+
+  
+    
   
 </div>
 )
