@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { Grid, useTheme, useMediaQuery, Hidden } from "@material-ui/core"
+import React, { useEffect , useState } from "react"
+import { Grid, useTheme, useMediaQuery, Hidden , } from "@material-ui/core"
 import WavingHandIcon from "../images/wavinghand@2x.png"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql , Link } from "gatsby"
 import DownArrow from "../images/Path 201@2x.png"
 import "./intro.css"
 
@@ -17,29 +17,34 @@ const Image = props => {
         }
       }
     }
-  `)
+  `);
   console.log(data)
 
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} {...props} />
 }
 
 function Intro(props) {
-  const [isScrolled, setScrolled] = useState(false)
+  const { isScrolled, setScrolled } = props;
+  const [showArrow ,setShowArrow] = useState(false);
+
+  setTimeout(() => {
+    setShowArrow(true);
+  },10*1000)
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScrolled(true)
+      setScrolled();
     })
   }, [])
 
   if(isScrolled){
     window.removeEventListener('scroll',() => {
-      setScrolled(true)
+      setScrolled()
     });
   }
   const theme = useTheme()
   const xl = useMediaQuery(theme.breakpoints.up("xl"))
-  const xs = useMediaQuery(theme.breakpoints.up("xs"))
+  const xs = useMediaQuery(theme.breakpoints.down("xs"))
 
   return (
     <div {...props}>
@@ -68,7 +73,7 @@ function Intro(props) {
                 maxWidth: "250px",
                 height: "auto",
                 position: "relative",
-                top: xl ? "-120px" : "-90px",
+                top: xl ? "-120px" : "-50px",
               }}
             />
           </Grid>
@@ -77,13 +82,13 @@ function Intro(props) {
             container
             item
             justify="center"
-            alignItems="center"
+            alignItems={ "center"}
             md={6}
             style={{
               fontSize: xl ? "32px" : "24px",
               lineHeight: xl ? "56px" : "40px",
               position: "relative",
-              top: !xs ? "-30px" : 0,
+              top: !xs ? "-20px" : "-60px",
             }}
           >
             <div style={{ maxWidth: "600px", margin: "15px" }}>
@@ -105,16 +110,14 @@ function Intro(props) {
                 Hi , I am Arun .
               </span>{" "}
               I am a Web developer, Machine Learning and Tech enthusiast , Cat
-              and Coffee lover. I would love to work on projects which helps
-              innocent people and make this world a better place. If you are
-              working on any such project , do consider collaborating with me :)
+              and Coffee lover. <Link to="#skills" style={{color:'grey',fontFamily:"'Lora',serif",textDecoration:'none'}}>Learn About Me</Link>
             </div>
           </Grid>
       
             <Hidden smDown>
               <img
                 src={DownArrow}
-                style={{ width: "30px", height: "auto" ,visibility:isScrolled?'hidden':'visible' }}
+                style={{ width: "30px", height: "auto" ,visibility:isScrolled ||( !showArrow )?'hidden':'visible' }}
                 className="down-arrow"
               />
             </Hidden>

@@ -5,14 +5,16 @@ function Footer() {
   return (
     <div
       style={{
+     
         marginTop: "100px",
         marginRight: 0,
         marginLeft: 0,
         marginBottom: 0,
         width: "100%",
-     
         backgroundColor: "#D92027",
         color: "white",
+        position:'sticky'
+        ,bottom:0
       }}
     >
       <Grid
@@ -20,7 +22,7 @@ function Footer() {
         justify="center"
         alignItems="center"
         style={{
-            height: "50px",
+            height: "70px",
           fontFamily: "'Merriweather',serif",
           fontSize: "16px",
         }}

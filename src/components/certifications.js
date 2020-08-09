@@ -165,7 +165,7 @@ function Certifications(props) {
               </Paper>
             ))}
            { limit<=list.length ? 
-           <Button color="primary" onClick={() => setLimit(l => l+3)}>
+           <Button style={{color:'grey'}} onClick={() => setLimit(l => l+3)}>
                 SHOW MORE
             </Button> :null}
             {limit > 3?<Button onClick={() => setLimit(3)} style={{marginLeft:'20px'}}>SHOW LESS</Button>:null}

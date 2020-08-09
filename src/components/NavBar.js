@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AppBar, Grid, Hidden, Button } from "@material-ui/core"
+import { AppBar, Grid, Hidden, Button, Fade } from "@material-ui/core"
 import InstagramLogo from "../images/1@2x.png"
 import GithubLogo from "../images/Path 305@2x.png"
 import LinkedInLogo from "../images/icons8-linkedin.png"
@@ -8,8 +8,9 @@ import "./NavBar.css"
 import Drawer from "./drawer"
 import { Link } from "gatsby"
 
-function NavBar() {
+function NavBar(props) {
   const [open, setOpen] = useState(false)
+  const { isScrolled } = props
 
   return (
     <div style={{ height: "50px", width: "100%" }}>
@@ -18,7 +19,8 @@ function NavBar() {
           container
           justify="center"
           alignItems="center"
-          style={{ padding: "15px" }}
+          className="nav"
+          style={{ padding: isScrolled ? '5px' : "15px" }}
         >
           <Grid
             alignItems="center"
@@ -65,24 +67,36 @@ function NavBar() {
                   width: "100%",
                 }}
               >
-                <Link to="#skills" className="link">
-                  SKILLSET
-                </Link>
-                <Link to="#projects" className="link">
-                  PROJECTS
-                </Link>
-                <Link to="#experience" className="link">
-                  EXPERIENCE
-                </Link>
-                <Link to="#education" className="link">
-                  EDUCATION
-                </Link>
-                <Link to="#certification" className="link">
-                  CERTIFICATIONS
-                </Link>
-                <Link to="#contactme" className="link">
-                  CONTACT ME
-                </Link>
+                <Fade in={isScrolled} timeout={1000} >
+                  <Link to="#skills" className="link">
+                    SKILLSET
+                  </Link>
+                </Fade>
+                <Fade in={isScrolled} timeout={1000}>
+                  <Link to="#projects" className="link">
+                    PROJECTS
+                  </Link>
+                </Fade>
+                <Fade in={isScrolled} timeout={1000}>
+                  <Link to="#experience" className="link">
+                    EXPERIENCE
+                  </Link>
+                </Fade>
+                <Fade in={isScrolled} timeout={1000}>
+                  <Link to="#education" className="link">
+                    EDUCATION
+                  </Link>
+                </Fade>
+                <Fade in={isScrolled} timeout={1000}>
+                  <Link to="#certification" className="link">
+                    CERTIFICATIONS
+                  </Link>
+                </Fade>
+                <Fade in={isScrolled} timeout={1000}>
+                  <Link to="#contactme" className="link">
+                    CONTACT ME
+                  </Link>
+                </Fade>
               </Grid>
             </Hidden>
             <Hidden smDown>

@@ -30,10 +30,8 @@ const CustomTooltip = withStyles({
 })(Tooltip)
 
 function Skillset(props) {
-
   return (
-    <div style={{marginTop:'100px'}} {...props}>
-   
+    <div style={{ marginTop: "100px" }} {...props}>
       <Grid
         container
         justify="center"
@@ -56,12 +54,14 @@ function Skillset(props) {
               My Skill Set
             </h2>
             <div style={{ fontSize: "16px" }}>
-              (Hover or touch the icons for proficiency level)
+              (Click the icons for proficiency level)
             </div>
           </div>
           <Grid container justify="flex-start" alignItems="center">
-          <CustomTooltip
-            disableFocusListener
+            <CustomTooltip
+              disableFocusListener
+              disableHoverListener
+              disableTouchListener
               arrow
               placement="top"
               title="Javascript (intermediate)"
@@ -69,8 +69,8 @@ function Skillset(props) {
                 backgroundColor: "red",
                 color: "white",
                 paddingRight: "30px",
-                paddingTop:"30px",
-                paddingBottom:"30px",
+                paddingTop: "30px",
+                paddingBottom: "30px",
                 fontSize: "32px",
               }}
             >
@@ -80,7 +80,9 @@ function Skillset(props) {
               />
             </CustomTooltip>
             <CustomTooltip
-            disableFocusListener
+              disableFocusListener
+              disableHoverListener
+              disableTouchListener
               arrow
               placement="top"
               title="Reactjs (intermediate)"
@@ -88,7 +90,7 @@ function Skillset(props) {
                 backgroundColor: "red",
                 color: "white",
                 padding: "30px",
-                
+
                 fontSize: "32px",
               }}
             >
@@ -101,6 +103,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Bootstrap (intermediate)"
               style={{
@@ -115,9 +119,11 @@ function Skillset(props) {
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
             </CustomTooltip>
-         
+
             <CustomTooltip
-            disableFocusListener
+              disableFocusListener
+              disableHoverListener
+              disableTouchListener
               arrow
               placement="top"
               title="Typescript (Beginner)"
@@ -136,6 +142,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="CSS (Intermediate)"
               style={{
@@ -153,6 +161,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="HTML (intermediate)"
               style={{
@@ -170,6 +180,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Nodejs (Intermediate)"
               style={{
@@ -187,6 +199,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Adobe XD (Beginner)"
               style={{
@@ -204,6 +218,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="C++ (Intermediate)"
               style={{
@@ -221,6 +237,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Nestjs (Beginner)"
               style={{
@@ -238,6 +256,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Redux (Intermediate)"
               style={{
@@ -255,6 +275,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Expressjs (Beginner)"
               style={{
@@ -272,6 +294,8 @@ function Skillset(props) {
             <CustomTooltip
               arrow
               disableFocusListener
+              disableHoverListener
+              disableTouchListener
               placement="top"
               title="Material UI for Reactjs (Beginner)"
               style={{
