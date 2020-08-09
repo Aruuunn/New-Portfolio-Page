@@ -75,7 +75,7 @@ function MediaCard(props) {
       }}
       key={idx}
     >
-      <Grid container direction="column" justify="flex-end" style={{height:'100%'}}>
+      <Grid container direction="column" justify="space-between" style={{height:'100%'}}>
 
         <div style={{ maxWidth: "400px", width: "100%" }} className="card">
           <div>
