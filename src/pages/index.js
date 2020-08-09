@@ -14,7 +14,7 @@ const IndexPage = () =>{
   const [isScrolled ,setScrolled ] = useState(false);
 
   return (
-  <div style={{ backgroundColor: "#F5F5F5",width:'100%',overflowX:'hidden',padding:0,margin:0}}>
+  <div style={{ backgroundColor: "#F5F5F5",width:'100%',overflowX:'hidden',padding:0,margin:0,scrollBehavior:'smooth'}}>
     <SEO title="Portfolio" />
     <NavBar isScrolled={isScrolled} />
     <Intro id="intro" isScrolled={isScrolled} setScrolled={() => setScrolled(true)}/>

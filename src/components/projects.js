@@ -75,51 +75,55 @@ function MediaCard(props) {
       }}
       key={idx}
     >
-      <div style={{ maxWidth: "400px", width: "100%" }} className="card">
-        <div>
-          <Img fluid={fluid} style={{ maxWidth: "400px", width: "100%" }} />
+      <Grid container direction="column" justify="flex-end" style={{height:'100%'}}>
 
-          <Link href={url} rel="noreferrer" target="_blank">
-            <div className="light"></div>
-          </Link>
+        <div style={{ maxWidth: "400px", width: "100%" }} className="card">
+          <div>
+            <Img fluid={fluid} style={{ maxWidth: "400px", width: "100%" }} />
+
+            <Link href={url} rel="noreferrer" target="_blank">
+              <div className="light"></div>
+            </Link>
+          </div>
+
+          <CardActionArea>
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h5"
+                style={{ fontFamily: "'Lora',serif" }}
+                component="h2"
+              >
+                {name}
+              </Typography>
+              <Typography
+                variant="body"
+                style={{ fontFamily: "'Merriweather',serif" }}
+              >
+                {description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
         </div>
 
-        <CardActionArea>
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              style={{ fontFamily: "'Lora',serif" }}
-              component="h2"
+        <CardActions>
+          <Grid container justify="space-between">
+            <Button
+              href={url}
+              rel="noreferrer"
+              target="_blank"
+              size="large"
+              variant="contained"
+              style={{ backgroundColor: "#FF9234", color: "white" }}
             >
-              {name}
-            </Typography>
-            <Typography
-              variant="body"
-              style={{ fontFamily: "'Merriweather',serif" }}
-            >
-              {description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </div>
-      <CardActions>
-        <Grid container justify="space-between">
-          <Button
-            href={url}
-            rel="noreferrer"
-            target="_blank"
-            size="large"
-            variant="contained"
-            style={{ backgroundColor: "#FF9234", color: "white" }}
-          >
-            Open
-          </Button>
-          <Button rel="noreferrer" target="_blank" href={repo}>
-            <img src={GithubLogo} style={{ height: "30px", width: "auto" }} />
-          </Button>
-        </Grid>
-      </CardActions>
+              Open
+            </Button>
+            <Button rel="noreferrer" target="_blank" href={repo}>
+              <img src={GithubLogo} style={{ height: "30px", width: "auto" }} />
+            </Button>
+          </Grid>
+        </CardActions>
+      </Grid>
     </Card>
   )
 }

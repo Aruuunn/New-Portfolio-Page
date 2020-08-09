@@ -110,7 +110,7 @@ function Intro(props) {
                 Hi , I am Arun .
               </span>{" "}
               I am a Web developer, Machine Learning and Tech enthusiast , Cat
-              and Coffee lover. <Link to="#skills" style={{color:'grey',fontFamily:"'Lora',serif",textDecoration:'none'}}>Learn About Me</Link>
+              and Coffee lover. <Link to="#skills" style={{color:'grey',fontFamily:"'Lora',serif" }}>Learn About Me</Link>
             </div>
           </Grid>
       

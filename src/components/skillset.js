@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Grid, Tooltip } from "@material-ui/core"
+import { Grid, Tooltip, ClickAwayListener  ,Button } from "@material-ui/core"
 import ReactLogo from "../images/react.png"
 import BootstrapLogo from "../images/bootstrap.png"
 import JsLogo from "../images/js.png"
@@ -25,9 +25,30 @@ const CustomTooltip = withStyles({
     fontWeight: "bold",
   },
   arrow: {
-    color: "red",
+    color: "#D92027",
   },
 })(Tooltip)
+
+const MyCustomToolTip = props => {
+  const [open, setOpen] = useState(false)
+  const { children } = props
+  return (
+    <ClickAwayListener onClickAway={() => setOpen(false)}>
+      <CustomTooltip
+        {...props}
+        open={open}
+        onClose={() => setOpen(false)}
+        PopperProps={{
+          disablePortal: true,
+        }}
+      >
+        <Button onClick={() => setOpen(true)} style={{backgroundColor:'inherit'}}>
+        {children}
+        </Button>
+      </CustomTooltip>
+    </ClickAwayListener>
+  )
+}
 
 function Skillset(props) {
   return (
@@ -58,7 +79,7 @@ function Skillset(props) {
             </div>
           </div>
           <Grid container justify="flex-start" alignItems="center">
-            <CustomTooltip
+            <MyCustomToolTip
               disableFocusListener
               disableHoverListener
               disableTouchListener
@@ -78,8 +99,8 @@ function Skillset(props) {
                 src={JsLogo}
                 style={{ height: "70px", width: "auto", margin: "0px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               disableFocusListener
               disableHoverListener
               disableTouchListener
@@ -98,9 +119,9 @@ function Skillset(props) {
                 src={ReactLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
+            </MyCustomToolTip>
 
-            <CustomTooltip
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -118,9 +139,9 @@ function Skillset(props) {
                 src={BootstrapLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
+            </MyCustomToolTip>
 
-            <CustomTooltip
+            <MyCustomToolTip
               disableFocusListener
               disableHoverListener
               disableTouchListener
@@ -138,8 +159,8 @@ function Skillset(props) {
                 src={TypescriptLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -157,8 +178,8 @@ function Skillset(props) {
                 src={CssLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -176,8 +197,8 @@ function Skillset(props) {
                 src={HtmlLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -195,8 +216,8 @@ function Skillset(props) {
                 src={NodejsLogo}
                 style={{ height: "100px", width: "auto", margin: "10px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -214,8 +235,8 @@ function Skillset(props) {
                 src={XDLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -233,8 +254,8 @@ function Skillset(props) {
                 src={CppLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -252,8 +273,8 @@ function Skillset(props) {
                 src={NestjsLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -271,8 +292,8 @@ function Skillset(props) {
                 src={ReduxLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -290,8 +311,8 @@ function Skillset(props) {
                 src={ExpressjsLogo}
                 style={{ height: "30px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
-            <CustomTooltip
+            </MyCustomToolTip>
+            <MyCustomToolTip
               arrow
               disableFocusListener
               disableHoverListener
@@ -309,7 +330,7 @@ function Skillset(props) {
                 src={MaterialUI}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
-            </CustomTooltip>
+            </MyCustomToolTip>
           </Grid>
         </Grid>
       </Grid>
