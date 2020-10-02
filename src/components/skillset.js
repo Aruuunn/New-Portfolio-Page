@@ -12,7 +12,8 @@ import CppLogo from "../images/cpp.png"
 import NestjsLogo from "../images/nestjs.png"
 import ReduxLogo from "../images/redux.png"
 import ExpressjsLogo from "../images/expressjs.png"
-import MaterialUI from "../images/material-ui.png"
+import MaterialUI from "../images/material-ui.png";
+import FlutterLogo from '../images/flutter.png';
 import { withStyles } from "@material-ui/core"
 
 const CustomTooltip = withStyles({
@@ -328,6 +329,25 @@ function Skillset(props) {
             >
               <img
                 src={MaterialUI}
+                style={{ height: "70px", width: "auto", margin: "20px" }}
+              />
+            </MyCustomToolTip>
+            <MyCustomToolTip
+              arrow
+              disableFocusListener
+              disableHoverListener
+              disableTouchListener
+              placement="top"
+              title="Flutter (Beginner)"
+              style={{
+                backgroundColor: "red",
+                color: "white",
+                padding: "30px",
+                fontSize: "32px",
+              }}
+            >
+              <img
+                src={FlutterLogo}
                 style={{ height: "70px", width: "auto", margin: "20px" }}
               />
             </MyCustomToolTip>

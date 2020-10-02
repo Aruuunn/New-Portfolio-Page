@@ -13,6 +13,11 @@ import Img from "gatsby-image"
 import "./projects.css"
 
 const list = [
+  {name :"Clustering Visualizer",
+  url:"http://clustering-visualizer.web.app/",
+  repo:"https://github.com/ArunMurugan78/clustering-visualizer",
+  description:"A Web App to visualize popular Clustering Algorithms namely DBSACN, KMeans, Hierarchical Clustering, and Mean Shift."
+ },
   {
     name: "Shortest Path Finder",
     url: "https://shortest-path-finder.web.app/",
@@ -36,24 +41,20 @@ const list = [
       "A python program to predict face landmark of a Cat! It is based on Deeplearning.",
   },
   {
-    name: "Classic Snake Game",
-    url: "https://classic-snakee-game.web.app/",
-    repo: "https://github.com/ArunMurugan78/snake",
-    description: "Classic Snake Game made using Reactjs",
+    name: "Cat Gallery",
+    url: "https://github.com/ArunMurugan78/CatGallery",
+    repo: "https://github.com/ArunMurugan78/CatGallery",
+    description: "An App to infinetly scroll down Cat photos 🐱.",
   },
 
-  {
-    name: "A News App",
-    url: "https://news-e2759.web.app/",
-    repo: "https://github.com/ArunMurugan78/News-app",
-    description: "A news app made using Reactjs and News Api",
-  },
+ 
   {
     name: "Corona Stats",
     url: "https://corona-stats-now.web.app/",
     repo: "https://github.com/ArunMurugan78/Corona-Stats",
     description: "A Covid-19 Tracker App made using Reactjs",
   },
+
 ]
 
 function MediaCard(props) {

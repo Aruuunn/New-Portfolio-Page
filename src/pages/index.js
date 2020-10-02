@@ -1,3 +1,8 @@
+/**
+ * Note: In case you are reading this, then I would like to say that this is really a bad code.
+ * And I regret writing this way :(
+ */
+
 import React , {useState} from "react"
 import SEO from "../components/seo"
 import NavBar from "../components/NavBar"
@@ -9,6 +14,8 @@ import MyEducation from "../components/education"
 import MyCertifications from "../components/certifications"
 import ContactMe from "../components/contactme"
 import Footer from '../components/footer';
+
+import './global.css';
 
 const IndexPage = () =>{ 
   const [isScrolled ,setScrolled ] = useState(false);

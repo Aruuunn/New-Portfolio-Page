@@ -92,14 +92,14 @@ function Intro(props) {
             }}
           >
             <div style={{ maxWidth: "600px", margin: "15px" }}>
-              <img
+              {/* <img
                 src={WavingHandIcon}
                 style={{
                   height: xl ? "40px" : "32px",
                   width: "auto",
                   marginRight: "10px",
                 }}
-              />
+              /> */}
               <span
                 style={{
                   fontSize: xl ? "40px" : "32px",
@@ -107,10 +107,9 @@ function Intro(props) {
                   fontWeight: "bold",
                 }}
               >
-                Hi , I am Arun .
+               👋 Hi , I am Arun .
               </span>{" "}
-              I am a Web developer, Machine Learning and Tech enthusiast , Cat
-              and Coffee lover. <Link to="#skills" style={{color:'grey',fontFamily:"'Lora',serif" }}>Learn About Me</Link>
+              I am a Web developer, Machine Learning and Tech enthusiast. I love Cats and Coffee ☕.  <Link to="#skills" style={{color:'grey',fontFamily:"'Lora',serif" }}> Learn more about me</Link>
             </div>
           </Grid>
       

@@ -1,0 +1,17 @@
+
+
+html,body {
+    margin: 0;
+    padding:0;
+}
+
+/* 
+html{
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+img {
+    filter: invert(1) hue-rotate(180deg);
+    
+} */
