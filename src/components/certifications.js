@@ -1,10 +1,17 @@
-import React , {useState } from "react"
+import React, { useState } from "react"
 import { Grid, Paper, Button } from "@material-ui/core"
 import LinkImage from "../images/link.svg"
 import CourseraImage from "../images/coursera.png"
 import FreeCodeCampImage from "../images/freecodecamp.svg"
 
 const list = [
+  {
+    image: CourseraImage,
+    type: "COURSERA",
+    name: "The Bits and Bytes of Computer Networking",
+    url:
+      "https://www.coursera.org/account/accomplishments/certificate/RG9MXMHXMEZZ",
+  },
   {
     image: CourseraImage,
     type: "COURSERA",
@@ -39,7 +46,6 @@ const list = [
     image: CourseraImage,
     type: "COURSERA",
     name: "Convolutional Neural Networks",
-    url: "Convolutional Neural Networks",
     url:
       "https://www.coursera.org/account/accomplishments/certificate/7GTLU8Z72ST8",
   },
@@ -75,7 +81,7 @@ const list = [
 ]
 
 function Certifications(props) {
-    const [limit ,setLimit ] = useState(3);
+  const [limit, setLimit] = useState(3)
   return (
     <div style={{ marginTop: "100px" }} {...props}>
       <Grid container justify="center" alignItems="center">
@@ -97,7 +103,7 @@ function Certifications(props) {
             >
               Certifications
             </div>
-            {list.slice(0,limit).map((o, idx) => (
+            {list.slice(0, limit).map((o, idx) => (
               <Paper
                 key={idx}
                 variant="outlined"
@@ -147,7 +153,7 @@ function Certifications(props) {
                         fontFamily: "'Merriweather',serif",
                         fontSize: "16px",
                         fontWeight: "bold",
-                        padding:'5px'
+                        padding: "5px",
                       }}
                     >
                       {o.name}
@@ -164,11 +170,22 @@ function Certifications(props) {
                 </Grid>
               </Paper>
             ))}
-           { limit<=list.length ? 
-           <Button style={{color:'grey'}} onClick={() => setLimit(l => l+3)}>
+            {limit <= list.length ? (
+              <Button
+                style={{ color: "grey" }}
+                onClick={() => setLimit(l => l + 3)}
+              >
                 SHOW MORE
-            </Button> :null}
-            {limit > 3?<Button onClick={() => setLimit(3)} style={{marginLeft:'20px'}}>SHOW LESS</Button>:null}
+              </Button>
+            ) : null}
+            {limit > 3 ? (
+              <Button
+                onClick={() => setLimit(3)}
+                style={{ marginLeft: "20px" }}
+              >
+                SHOW LESS
+              </Button>
+            ) : null}
           </div>
         </Grid>
       </Grid>

@@ -1,8 +1,3 @@
-/**
- * Note: In case you are reading this, then I would like to say that this is really a bad code.
- * And I regret writing this way :(
- */
-
 import React , {useState} from "react"
 import SEO from "../components/seo"
 import NavBar from "../components/NavBar"
@@ -37,8 +32,3 @@ const IndexPage = () =>{
 )}
 
 export default IndexPage
-
-/**
- * font-family: 'Lora', serif;
- * font-family: 'Merriweather', serif;
- */
